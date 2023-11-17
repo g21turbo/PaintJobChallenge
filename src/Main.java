@@ -1,6 +1,11 @@
 public class Main {
     public static void main(String[] args) {
 
+
+        System.out.println(getBucketCount(-3.4, 2.1, 1.5, 2));
+        System.out.println(getBucketCount(3.4, 2.1, 1.5, 2));
+        System.out.println(getBucketCount(2.75, 3.25, 2.5, 1));
+
     }
 
     public static int getBucketCount(double width, double height, double areaPerBucket, double extraBuckets) {
@@ -10,9 +15,9 @@ public class Main {
         }
 
         double area = width * height;
+        double bucketCount = area / areaPerBucket - extraBuckets;
 
-
-        return 1;
+        return (int) Math.round(bucketCount);
     }
 
 }
